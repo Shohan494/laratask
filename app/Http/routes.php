@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
  * Display All Tasks
  */
 Route::get('/', function () {
-    return view('tasks');
+    $tasks = Task::orderBy('created_at', 'asc')->get();
+
+    return view('tasks', [
+        'tasks' => $tasks
+    ]);
 });
 
 /**
@@ -25,6 +29,11 @@ Route::post('/task', function (Request $request) {
     }
 
     // Create The Task...
+    $task = new Task;
+    $task->name = $request->name;
+    $task->save();
+
+    return redirect('/');
 });
 
 /**
