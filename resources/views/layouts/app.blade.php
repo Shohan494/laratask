@@ -2,8 +2,10 @@
 <html lang="en">
     <head>
         <title>Laravel Quickstart - Basic</title>
+         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+        rel="stylesheet">
 
-        <!-- CSS And JavaScript -->
+        
     </head>
 
     <body>
